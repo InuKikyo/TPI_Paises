@@ -46,6 +46,33 @@ def agregar(paises):
     print ("País agregado exitosamente.")
 
 
+#Opcion 3. Modificar un pais
+def modificar(paises):
+    nombre = input("País que desee modificar: ").lower()
+
+    for pais in paises:
+        if pais["nombre"].lower() == nombre:
+            print ("1. Población: ")
+            print ("2. Superficie: ")
+
+            opcion = input("Seleccione una opción: ")
+            
+            try:
+                if opcion == "1":
+                    pais["poblacion"] = int(input("Población del nuevo país: "))
+                elif opcion == "2":
+                    pais["superficie"] = int(input("Superficie del nuevo país: "))
+                else:
+                    print ("Opción inválida.")
+                    return
+                
+                print ("País actualizado exitosamente.")
+            except ValueError:
+                print ("Ingrese solo números.")
+                return
+    print ("País no encontrado")
+
+
 
 #Menú
 def mainmenu():
