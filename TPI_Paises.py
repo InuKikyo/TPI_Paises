@@ -90,6 +90,19 @@ def buscar(paises):
         print ("No se pudo encontrar el país.")
 
 
+#Opcion 5. Filtrar paises por continente
+def filtrar(paises):
+
+    continente = input("Ingrese un continente: ").lower()
+    encontrados = []
+
+    for pais in paises:
+        if pais["continente"].lower() == continente:
+            encontrados.append(pais)
+
+    mostrar(encontrados)
+
+
 
 #Menú
 def mainmenu():
@@ -98,7 +111,7 @@ def mainmenu():
     print ("2. Agregar un país")
     print ("3. Modificar un país")
     print ("4. Buscar un país")
-    print ("5. Filtrar países")
+    print ("5. Filtrar países por continente")
     print ("6. Ordenar países")
     print ("7. Estadísticas")
     print ("8. Salir")
