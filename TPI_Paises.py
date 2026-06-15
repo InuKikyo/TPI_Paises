@@ -70,6 +70,7 @@ def modificar(paises):
                     return
                 
                 print ("País actualizado exitosamente.")
+                return
             except ValueError:
                 print ("Ingrese solo números.")
                 return
