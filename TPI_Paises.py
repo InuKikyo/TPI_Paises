@@ -25,7 +25,10 @@ def mostrar(paises):
         return
     
     for pais in paises:
-        print (f"{pais['nombre']} | " f"Población:{pais['poblacion']} | " f"Superficie:{pais['superficie']}" | f"Continente: {pais['continente']}")
+        print (f"{pais['nombre']} |",
+                f"Población: {pais['poblacion']} |",
+                f"Superficie: {pais['superficie']} |",
+                f"Cotinente: {pais['continente']}")
 
 #Opcion 2. Agregar un país
 def agregar(paises):
