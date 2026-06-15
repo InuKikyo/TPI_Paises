@@ -16,4 +16,20 @@ def cargar_paises():
         print ("Archivo csv no encontrado.")
 
     return paises
+
+
+
+def mainmenu():
+    print ("\n=====Menú=====")
+    print ("1. Mostrar países")
+    print ("2. Agregar un país")
+    print ("3. Modificar un país")
+    print ("4. Buscar un país")
+    print ("5. Filtrar países")
+    print ("6. Ordenar países")
+    print ("7. Estadísticas")
+    print ("8. Salir")
+
+
+
     
