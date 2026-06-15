@@ -27,7 +27,23 @@ def mostrar(paises):
     for pais in paises:
         print (f"{pais['nombre']} | " f"Población:{pais['poblacion']} | " f"Superficie:{pais['superficie']}" | f"Continente: {pais['continente']}")
 
+#Opcion 2. Agregar un país
+def agregar(paises):
 
+    nombre = input("Ingrese el nombre del país que desea agregar: ")
+    try:
+        poblacion = int(input("Población: "))
+        superficie = int(input("Superficie: "))
+    except ValueError:
+        print ("Solo ingrese números.")
+    
+    continente = input("Continente: ")
+    paises.append({"nombre": nombre,
+                    "poblacion": poblacion,
+                    "superficie": superficie,
+                    "continente": continente})
+    
+    print ("País agregado exitosamente.")
 
 
 
