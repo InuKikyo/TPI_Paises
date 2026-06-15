@@ -188,8 +188,6 @@ def estadisticas(paises):
             continentes[continente]
         )
 
-
-
 #Menú
 def mainmenu():
     print ("\n=====Menú=====")
@@ -202,6 +200,39 @@ def mainmenu():
     print ("7. Estadísticas")
     print ("8. Salir")
 
+
+#Sistema del main menu
+def main():
+    paises = cargar_paises()
+
+    while True:
+        mainmenu()
+
+        opcion = input("Ingrese una opción: ")
+
+        if opcion == "1":
+            mostrar(paises)
+        elif opcion == "2":
+            agregar(paises)
+        elif opcion == "3":
+            modificar(paises)
+        elif opcion == "4":
+            buscar(paises)
+        elif opcion == "5":
+            filtrar(paises)
+        elif opcion == "6":
+            ordenar(paises)
+        elif opcion == "7":
+            estadisticas(paises)
+        elif opcion == "8":
+            print ("Fin del programa. Gracias por utilizar.")
+            break
+        else:
+            print ("Opción inválida.")
+
+
+if __name__ == "__main__":
+    main()
 
 
     
