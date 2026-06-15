@@ -18,7 +18,20 @@ def cargar_paises():
     return paises
 
 
+#Opcion 1. Mostrar países
+def mostrar(paises):
+    if not paises:
+        print ("No hay países cargados.")
+        return
+    
+    for pais in paises:
+        print (f"{pais['nombre']} | " f"Población:{pais['poblacion']} | " f"Superficie:{pais['superficie']}" | f"Continente: {pais['continente']}")
 
+
+
+
+
+#Menú
 def mainmenu():
     print ("\n=====Menú=====")
     print ("1. Mostrar países")
