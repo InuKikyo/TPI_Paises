@@ -48,7 +48,7 @@ def agregar(paises):
 
 #Opcion 3. Modificar un pais
 def modificar(paises):
-    nombre = input("País que desee modificar: ").lower()
+    nombre = input("País que desea modificar: ").lower()
 
     for pais in paises:
         if pais["nombre"].lower() == nombre:
@@ -71,6 +71,23 @@ def modificar(paises):
                 print ("Ingrese solo números.")
                 return
     print ("País no encontrado")
+
+
+#Opcion 4. Buscar un pais
+def buscar(paises):
+
+    nombre = input("Ingrese el nombre del país que desea buscar: ").lower()
+    encontrados = []
+
+    for pais in paises:
+        if nombre in pais["nombre"].lower():
+            encontrados.append(pais)
+    
+    if encontrados:
+        for pais in encontrados:
+            print (pais)
+    else:
+        print ("No se pudo encontrar el país.")
 
 
 
