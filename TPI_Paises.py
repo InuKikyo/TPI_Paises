@@ -103,6 +103,48 @@ def filtrar(paises):
     mostrar(encontrados)
 
 
+#Opcion 6. Ordenar paises
+def ordenar(paises):
+
+    print ("1. Nombre: ")
+    print ("2. Población: ")
+    print ("3. Superficie: ")
+
+    opcion = input("Ordenar países por: ")
+
+    if opcion == "1":
+
+        for i in range(len(paises)):
+            for j in range(i + 1, len(paises)):
+                if paises[i]["nombre"] > paises[j]["nombre"]:
+                    aux = paises[i]
+                    paises[i] = paises[j]
+                    paises[j] = aux
+    elif opcion == "2":
+
+        for i in range(len(paises)):
+            for j in range(i + 1, len(paises)):
+                if paises[i]["poblacion"] > paises[j]["poblacion"]:
+                    aux = paises[i]
+                    paises[i] = paises[j]
+                    paises[j] = aux
+    elif opcion == "3":
+
+        for i in range(len(paises)):
+            for j in range(i + 1, len(paises)):
+                if paises[i]["superficie"] > paises[j]["superficie"]:
+                    aux = paises[i]
+                    paises[i] = paises[j]
+                    paises[j] = aux
+    else:
+        print ("Opción inválida.")
+        return
+
+    mostrar(paises)
+
+
+
+
 
 #Menú
 def mainmenu():
