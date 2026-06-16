@@ -34,6 +34,12 @@ def mostrar(paises):
 def agregar(paises):
 
     nombre = input("Ingrese el nombre del país que desea agregar: ")
+
+    for pais in paises:
+        if pais["nombre"].lower() == nombre.lower():
+            print ("Ese país ya está cargado.")
+            return
+        
     try:
         poblacion = int(input("Población: "))
         superficie = int(input("Superficie: "))
