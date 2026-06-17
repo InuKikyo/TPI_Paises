@@ -22,3 +22,6 @@ Trabajo Practico Integrador de Programación I
 -Ciclo While
 -Uso de if, elif, else
 -Uso de try y except para manejo de errores
+
+Videos explicativos:
+-Barra Brenda: https://drive.google.com/file/d/1VSvKn4KnZ2LkBDwHVg-gYuGLQpx8PRx7/view?usp=drive_link
